@@ -1,0 +1,110 @@
+@import "../common/common.less";
+
+.banner {
+    position: relative;
+
+    .banner-bg {
+        height: 786px;
+        width: 100%;
+        position: relative;
+        background: url("@{imgPath}home/big_bg.png") repeat-x;
+
+        //轮播图样式
+        .banner-container {
+            width: 100%;
+            height: 100%;
+
+            .swiper-wrapper {
+                .swiper-slide {
+                    position: relative;
+                    .img-text {
+                        width: 25.9%;
+                        position: absolute;
+                        left: 18.75%;
+                        top: 20.5%;
+                    }
+                    .img-tree {
+                        width: 31.1%;
+                        position: absolute;
+                        right: 17.7%;
+                        bottom: 12.5%;
+                    }
+
+                }
+            }
+
+            .swiper-button-next {
+                top:40%;
+                width: 37px;
+                height: 70px;
+                right: 10%;
+                background: url("@{imgPath}home/right_arrow_icon.png") no-repeat center;
+            }
+
+            .swiper-button-prev {
+                top:40%;
+                left: 10%;
+                width: 37px;
+                height: 70px;
+                background: url("@{imgPath}home/left_arrow_icon.png") no-repeat center;
+            }
+        }
+
+        .cloud_left {
+            position: absolute;
+            left: 12%;
+            top: 65%;
+        }
+        .cloud_mid {
+            position: absolute;
+            left: 45%;
+            top: 20%;
+        }
+        .cloud_right {
+            position: absolute;
+            right: 15%;
+            top: 10%;
+        }
+    }
+    .banner-small {
+        position: relative;
+        height: 455px;
+        width: 100%;
+        background: url("@{imgPath}home/small_bg.png") repeat-x;
+
+        .idea {
+            height: 453px;
+            background: url("@{imgPath}home/idea.png") no-repeat center;
+        }
+        .team {
+            height: 453px;
+            background: url("@{imgPath}home/team.png") no-repeat center;
+        }
+        .business {
+            height: 453px;
+            background: url("@{imgPath}home/business.png") no-repeat center;
+        }
+    }
+
+    .triangle {
+        position: absolute;
+        display: flex;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 33px;
+
+        .triangle-left, .triangle-right {
+            flex: 1;
+            float: left;
+            background: #fff;
+        }
+
+        .triangle-center {
+            width: 60px;
+            float: left;
+            background: url("@{imgPath}home/down_arrow.png") no-repeat center center;
+        }
+    }
+}
+

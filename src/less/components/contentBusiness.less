@@ -1,0 +1,125 @@
+@import "../common/common.less";
+.content-business{
+    width: 1250px;
+    margin: 0 auto;
+
+    .title{
+        font-size: 30px;
+        font-weight: bold;
+        color: #333;
+        margin: 85px 0 26px 0;
+
+        &:nth-of-type(1){
+            margin-top: 50px;
+        }
+    }
+
+    .prompt{
+        font-size: 16px;
+        color: #666;
+        line-height: 28px;
+    }
+
+    .companyInfo{
+        display: flex;
+
+        dl{
+            float: left;
+            flex: 1;
+            margin-left: 72px;
+
+            &:nth-of-type(1),&:nth-of-type(2){
+                border-right: 1px solid #ccc;
+            }
+
+            dd{
+                margin: 42px 0 0 0;
+                width: 42px;
+                height: 42px;
+
+                &.phone{
+                    background: url("@{imgPath}home/phone_icon.png") no-repeat center;
+                }
+
+                &.address{
+                    background: url("@{imgPath}home/address_icon.png") no-repeat center;
+                }
+
+                &.email{
+                    background: url("@{imgPath}home/email_icon.png") no-repeat center;
+                }
+
+            }
+
+            dt{
+                h6{
+                    font-size: 16px;
+                    color: #333;
+                    margin: 27px 0 18px;
+                    font-weight: normal;
+                }
+
+                span{
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #666;
+                }
+            }
+        }
+    }
+
+    .postMsg{
+        .input-text{
+            display: flex;
+            margin: 92px 0 0 0;
+
+            input{
+                flex: 1;
+                margin-right: 45px;
+                border: none;
+                border-bottom: 1px solid #ccc;
+                font-size: 16px;
+                line-height: 28px;
+                height: 28px;
+                color: #999;
+            }
+
+            input:focus {
+                outline: none;
+                border-color: #333;
+                color: #333;
+            }
+        }
+
+        textarea{
+            font-family: regular, Arial, '微软雅黑', 'Microsoft JhengHei', sans-serif;
+            margin-top: 40px;
+            height: 160px;
+            width: 100%;
+            font-size: 16px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            color: #999;
+        }
+
+        textarea:focus{
+            outline: none;
+            border-color: #333;
+            resize: none;
+            color: #333;
+        }
+
+        .btn{
+            width: 117px;
+            height: 40px;
+            display: block;
+            margin: 50px 0 300px 0;
+            cursor: pointer;
+            background: url("@{imgPath}home/button_send.png") no-repeat center;
+
+            &:hover{
+                background: url("@{imgPath}home/button_send_hover.png") no-repeat center;
+            }
+        }
+    }
+}
