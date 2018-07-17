@@ -7,46 +7,50 @@
         height: 786px;
         width: 100%;
         position: relative;
-        background: url("@{imgPath}home/big_bg.png") repeat-x;
 
-        //轮播图样式
-        .banner-container {
+        .banner-box{
             width: 100%;
             height: 100%;
+            margin: 0 auto;
 
-            .swiper-wrapper {
-                .swiper-slide {
-                    position: relative;
-                    .img-text {
-                        width: 25.9%;
-                        position: absolute;
-                        left: 18.75%;
-                        top: 20.5%;
-                    }
-                    .img-tree {
-                        width: 31.1%;
-                        position: absolute;
-                        right: 17.7%;
-                        bottom: 12.5%;
-                    }
+            //轮播图样式
+            .banner-container {
+                position: relative;
+                width: 100%;
+                height: 100%;
 
+                .swiper-wrapper {
+                    width: 100%;
+                    height: 100%;
+
+                    .swiper-slide {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+
+                        img{
+                            position: absolute;
+                            left: 50%;
+                            margin-left: -960px;
+                        }
+                    }
                 }
-            }
 
-            .swiper-button-next {
-                top:40%;
-                width: 37px;
-                height: 70px;
-                right: 10%;
-                background: url("@{imgPath}home/right_arrow_icon.png") no-repeat center;
-            }
+                .swiper-button-next {
+                    top:40%;
+                    width: 37px;
+                    height: 70px;
+                    right: 10%;
+                    background: url("@{imgPath}home/right_arrow_icon.png") no-repeat center;
+                }
 
-            .swiper-button-prev {
-                top:40%;
-                left: 10%;
-                width: 37px;
-                height: 70px;
-                background: url("@{imgPath}home/left_arrow_icon.png") no-repeat center;
+                .swiper-button-prev {
+                    top:40%;
+                    left: 10%;
+                    width: 37px;
+                    height: 70px;
+                    background: url("@{imgPath}home/left_arrow_icon.png") no-repeat center;
+                }
             }
         }
 
@@ -93,6 +97,7 @@
         bottom: 0;
         width: 100%;
         height: 33px;
+        z-index: 1200;
 
         .triangle-left, .triangle-right {
             flex: 1;

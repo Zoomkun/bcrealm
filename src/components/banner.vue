@@ -1,33 +1,25 @@
 <template>
     <div class="banner">
-        <div v-if="page.pageNow === 0" class="banner-bg">
-            <img class="cloud_left" src="@/assets/home/cloud_left.png" alt="">
-            <img class="cloud_mid" src="@/assets/home/cloud_mid.png" alt="">
-            <img class="cloud_right" src="@/assets/home/cloud_right.png" alt="">
-
-            <div class="swiper-container banner-container">
-                <span class="swiper-button-prev"></span>
-                <ul class="swiper-wrapper">
-                    <li class="swiper-slide">
-                        <img class="img-text" src="@/assets/home/text.png" alt="">
-                        <img class="img-tree" src="@/assets/home/tree.png" alt="">
-                    </li>
-                    <li class="swiper-slide">
-                        <img class="img-text" src="@/assets/home/text.png" alt="">
-                        <img class="img-tree" src="@/assets/home/tree.png" alt="">
-                    </li>
-                    <li class="swiper-slide">
-                        <img class="img-text" src="@/assets/home/text.png" alt="">
-                        <img class="img-tree" src="@/assets/home/tree.png" alt="">
-                    </li>
-                    <li class="swiper-slide">
-                        <img class="img-text" src="@/assets/home/text.png" alt="">
-                        <img class="img-tree" src="@/assets/home/tree.png" alt="">
-                    </li>
-                </ul>
-                <span class="swiper-button-next"></span>
-                <span class="banner-bullets">
+        <div v-show="page.pageNow === 0" class="banner-bg">
+            <div class="banner-box">
+                <div class="swiper-container banner-container">
+                    <span class="swiper-button-prev"></span>
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a href="https://www.baidu.com" target="_blank">
+                                <img src="@/assets/home/banner2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="https://www.baidu.com" target="_blank">
+                                <img src="@/assets/home/banner1.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="swiper-button-next"></span>
+                    <span class="banner-bullets">
                 </span>
+                </div>
             </div>
         </div>
         <div v-if="page.pageNow !== 0" class="banner-small">
@@ -72,6 +64,7 @@
                 var swiper = new Swiper('.swiper-container', {
                     effect: 'fade',
                     autoplay: false,
+                    loop:true,
                     pagination: {
                         el: '.banner-bullets',
                         bulletClass:'banner-bullet',
@@ -82,8 +75,8 @@
                         prevEl: '.swiper-button-prev',
                     },
                     on: {
-                        slideChangeTransitionEnd: function () {
-                            bus.$emit('toChangeSwiper',swiper.activeIndex)
+                        click: function () {
+                            bus.$emit('toChangeSwiper',swiper.realIndex)
                         },
                     },
                 })
