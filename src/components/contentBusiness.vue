@@ -29,7 +29,7 @@
         <p class="prompt">如果您有任何问题，请不要犹豫，给我们发送邮件。</p>
         <div class="postMsg">
             <p class="input-text">
-                <input type="text" v-model="msg.name" placeholder="您的名字">
+                <input type="text" v-model="msg.userName" placeholder="您的名字">
                 <input type="text" v-model="msg.email" placeholder="您的邮箱">
                 <input type="text" v-model="msg.title" placeholder="标题">
             </p>
@@ -47,7 +47,7 @@
         data() {
             return {
                 msg:{
-                    name:'',
+                    userName:'',
                     email:'',
                     title:'',
                     content:'',
