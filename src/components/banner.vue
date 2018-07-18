@@ -63,7 +63,7 @@
                 // swiper動畫
                 var swiper = new Swiper('.swiper-container', {
                     effect: 'fade',
-                    autoplay: false,
+                    autoplay: true,
                     loop:true,
                     pagination: {
                         el: '.banner-bullets',
@@ -91,7 +91,8 @@
     .banner-bullets{
         position: absolute;
         left: 0;
-        bottom:130px !important;
+        z-index: 1;
+        bottom:60px !important;
         text-align: center;
     }
 
