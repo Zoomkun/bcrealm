@@ -6,12 +6,12 @@
                     <span class="swiper-button-prev"></span>
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide">
-                            <a href="https://www.baidu.com" target="_blank">
+                            <a href="http://nxh.bcrealm.com" target="_blank">
                                 <img src="@/assets/home/banner2.jpg" alt="">
                             </a>
                         </li>
                         <li class="swiper-slide">
-                            <a href="https://www.baidu.com" target="_blank">
+                            <a href="http://bbm.bcrealm.com" target="_blank">
                                 <img src="@/assets/home/banner1.jpg" alt="">
                             </a>
                         </li>
@@ -78,6 +78,9 @@
                         click: function () {
                             bus.$emit('toChangeSwiper',swiper.realIndex)
                         },
+                        autoplay: function () {
+                            bus.$emit('toChangeSwiper', swiper.realIndex)
+                        }
                     },
                 })
             },

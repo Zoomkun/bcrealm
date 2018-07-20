@@ -6,22 +6,21 @@
             <dl>
                 <dd class="phone"></dd>
                 <dt>
-                    <h6>电话</h6>
-                    <span>手机：13888888888<br/>座机：0755-123456</span>
+                    <h6>联系方式</h6>
+                    <span>联系人：曹先生<br/>手&emsp;机：187-0755-9295<br/>座&emsp;机：0755-86525405</span>
                 </dt>
             </dl>
             <dl>
                 <dd class="address"></dd>
                 <dt>
                     <h6>地址</h6>
-                    <span>南山区天工道科技北路南玻电子大厦302室<br/>中国.深圳市</span>
+                    <span>深圳市南山区科技北三路天工道1号<br/>宏益嘉瑞大厦301、302室</span>
                 </dt>
             </dl>
             <dl>
-                <dd class="email"></dd>
+                <dd class="qrCode"></dd>
                 <dt>
-                    <h6>邮箱</h6>
-                    <span>support@supernovatheme.com</span>
+                    <span class="qrCodeTitle">公众号二维码</span>
                 </dt>
             </dl>
         </div>
